@@ -40,7 +40,7 @@ class OtpForm extends React.Component {
             }
         }catch (e){
             this.setState({message: "OTP invalid"});
-        };
+        }
 
         this.setState({
             otpSubmitted: true
