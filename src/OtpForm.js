@@ -37,6 +37,8 @@ class OtpForm extends React.Component {
             const data = await response.json();
             if (response.ok){
                 this.setState({message: "Successfully verified OTP"});
+            }else{
+                this.setState({message: data.message});
             }
         }catch (e){
             this.setState({message: "OTP invalid"});
@@ -116,7 +118,7 @@ class OtpForm extends React.Component {
                         </label>
                     </div>
                     <div>
-                        <label>${this.state.message}</label>
+                        <label>{this.state.message}</label>
                     </div>
                     <input type="submit" value="Back"/>
                 </form>
