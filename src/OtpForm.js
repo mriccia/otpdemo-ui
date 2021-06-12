@@ -33,9 +33,14 @@ class OtpForm extends React.Component {
         };
 
         const response = await fetch(`${API_URL}/validate-otp`, requestOptions);
-        const data = await response.json();
-
-        //todo add message to state
+        try{
+            const data = await response.json();
+            if (response.ok){
+                this.setState({message: "Successfully verified OTP"});
+            }
+        }catch (e){
+            this.setState({message: "OTP invalid"});
+        };
 
         this.setState({
             otpSubmitted: true
