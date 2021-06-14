@@ -1,6 +1,6 @@
 import React from "react";
 
-const API_URL="https://4a0nplvrd1.execute-api.ap-southeast-1.amazonaws.com/Prod";
+const API_URL="https://g5jkd50ck5.execute-api.eu-west-1.amazonaws.com/Prod";
 
 class OtpForm extends React.Component {
     constructor(props) {
